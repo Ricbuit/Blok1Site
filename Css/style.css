@@ -1,0 +1,15 @@
+
+.dropdownmenu ul, .dropdownmenu li 
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(136, 136, 136);
+}
+
+.dropdownmenu li 
+{
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(202, 202, 202);
+}
