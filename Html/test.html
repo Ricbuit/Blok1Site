@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <link rel="stylesheet" type="text/css" href="../Css/style.css">
+
+  <title>Website</title>
+
+</head>
+
+<body>
+
+  <p>This is page 5</p> 
+
+  <hr>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Naam</th>
+        <th>Adres</th>
+        <th>Postcode</th>
+        <th>Woonplaats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Aarts</td>
+        <td>Eikenlaan 12</td>
+        <td>1234 AA</td>
+        <td>Arnhem</td>
+      </tr>
+      <tr>
+        <td>Berens</td>
+        <td>Zeestraat 98</td>
+        <td>5664 AB</td>
+        <td>Vlissingen</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table border="1">
+  <tbody>
+      <tr>
+          <td colspan="3">Samengevoegde rij</td>     
+          <!-- Let op, de twee cellen die hier normaal zouden staan, staan hier nu niet meer! -->
+      </tr>
+      <tr>
+          <td>Eerste cel</td>
+          <td>Tweede cel</td>
+          <td>Derde cel</td>
+      </tr>
+  </tbody>
+  </table>
+
+  <hr>
+
+  <form action="https://google.com/" method="GET">
+
+    <input name="q" type="text" placeholder="Typ hier uw voornaam...">
+  
+    <input type="submit" value="Zoek met Google" >
+    <input type="checkbox"><br>
+    <input type="date"><br>
+    <input type="file"><br>
+    <input type="number"><br>
+    <input type="password"><br>
+    <input type="radio" name="kiesMaar" value="1">Ja
+    <input type="radio" name="kiesMaar" value="0">Nee
+    <input type="color"><br>
+    <input type="range"><br>
+    <input type="reset"><br>
+    <textarea name="reactie" placeholder="Typ hier uw reactie..."></textarea>
+    <label for="voornaam">Voornaam:</label>
+    <input type="text" name="voornaam" id="voornaam">
+    <input type="submit"><br>
+
+  </form>
+
+</body>
+
+</html>
