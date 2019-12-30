@@ -4,6 +4,7 @@
 
 <head>
 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../Css/style.css">
 
   <title>Website</title>
@@ -12,17 +13,18 @@
 
 <body>
 
-  <nav class="dropdownmenu">
+  <nav class="navigation">
+
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-            <ul class="submenu">
-                <li><a href="#">Pindakaas 100%</a></li>
-                <li><a href="#">Pindakaas Royale</a></li>
-            </ul>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">Products</a>
+          <ul class="dropdown">
+            <li><a href="#">Pindakaas 100%</a></li>
+            <li><a href="#">Pindakaas Royale</a></li>
+          </ul>    
+        </li>
     </ul>
-
   </nav>
 
 </body>
