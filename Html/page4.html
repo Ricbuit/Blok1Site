@@ -3,21 +3,61 @@
 <html>
 
 <head>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../Css/style.css">
-
   <title>Website</title>
-
 </head>
 
 <body>
 
-  <p>This is page 4</p> 
+  <header>
+    <nav class="navigation">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">About us</a></li>
+          <li><a href="page3.html">Sign up</a>
+          <li><a href="page4.html">Topics</a>
+            <ul class="dropdown">
+              <li><a href="page5.html">Vehicula</a></li>
+              <li><a href="page6.html">Rhoncusa</a></li>
+            </ul>    
+          </li>
+      </ul>
+    </nav>
+  </header>
 
-  <a href="index.html">Page 1</a>
-  <a href="page2.html">Page 2</a>
-  <a href="page3.html">Page 3</a>
-  <a href="page5.html">Page 5</a>
+	<section id="twosplit">
+		<div class="inner">
+			<article>
+				<header>
+					<h3>Rhoncusa</h3><br>
+        </header>
+        <div class="card">
+          <a href="page5.html"><img src="../Img/pic03.jpg" class="imagefit"/></a><br>
+          <div class="container">
+            <h4><b>Condimentum</b></h4><br>
+              <p>Maecenas vestibulum interdum ultricies. Maecenas vitae turpis eget odio rutrum rhoncus. Nulla ac elit risus. Proin consequat condimentum urna, nec auctor odio laoreet in. Phasellus pulvinar eget ligula ut tempor. Morbi scelerisque eget eros sed convallis.</p><br>
+          </div>
+        </div>
+        </article>
+				<article>
+			    <header>
+						<h3>Vehicula</h3><br>
+					</header>
+          <div class="card">
+            <a href="page6.html"><img src="../Img/pic01.jpg" class="imagefit"/></a><br>
+            <div class="container">
+              <h4><b>Vestibulum</b></h4><br>
+              <p>Maecenas vestibulum interdum ultricies. Maecenas vitae turpis eget odio rutrum rhoncus. Nulla ac elit risus. Proin consequat condimentum urna, nec auctor odio laoreet in. Phasellus pulvinar eget ligula ut tempor. Morbi scelerisque eget eros sed convallis.</p><br>
+          </div>
+        </div>
+			</article>
+		</div>
+	</section>
+
+  <footer>
+    <a href="">&copy; Design naam: Link</a>
+  </footer>
 
 </body>
 

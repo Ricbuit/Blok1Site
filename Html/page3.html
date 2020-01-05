@@ -3,21 +3,52 @@
 <html>
 
 <head>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../Css/style.css">
-
   <title>Website</title>
-
 </head>
 
 <body>
 
-  <p>This is page 3</p> 
+  <header>
+    <nav class="navigation">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">About us</a></li>
+          <li><a href="page3.html">Sign up</a>
+          <li><a href="page4.html">Topics</a>
+            <ul class="dropdown">
+              <li><a href="page5.html">Vehicula</a></li>
+              <li><a href="page6.html">Rhoncusa</a></li>
+            </ul>    
+          </li>
+      </ul>
+    </nav>
+  </header>
 
-  <a href="index.html">Page 1</a>
-  <a href="page2.html">Page 2</a>
-  <a href="page4.html">Page 4</a>
-  <a href="page5.html">Page 5</a>
+  <section id = "form">
+    <div class="inner">
+      <h2>Sign up</h2><br>
+      <form action="" method="GET">
+        <p>Username</p>
+        <input type="text" placeholder="E-Mail">
+        <p>Password</p>
+        <input type="password" placeholder="Password">
+        <p>Gender</p>
+        <input type="radio" name="gender" value="1">Male
+        <input type="radio" name="gender" value="0">Female 
+        <br><br><p>Birthday</p>
+        <input type="date">
+        <p>Do you want to receive our newsletter?</p>
+        <input type="checkbox"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <a href="">&copy; Design naam: Link</a>
+  </footer>
 
 </body>
 

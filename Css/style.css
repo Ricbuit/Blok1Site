@@ -5,11 +5,16 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* NAV */
+body
+{
+    background: linear-gradient(to right, #ffbb84 0%, #ffffff 50%, #ffffff 0%, #b3edfa 100%);
+}
+
+/* Nav */
 
 .navigation
 {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(31, 31, 31);
     text-align: center;
     padding: .5%;
     font-size: large;
@@ -27,7 +32,7 @@
     height: 40px;
     line-height: 40px;
     flex-basis: 20%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(31, 31, 31);
 }
 
 .navigation > ul
@@ -41,16 +46,21 @@
 {
     margin-left: .5%;
     margin-right: .5%;
+    z-index: 1;
 }
 
 .dropdown li
 {
-    display: none;
+    margin-top: -20px;
+    visibility: hidden;
 }
 
 .navigation ul li:hover .dropdown li
 {
+    visibility: visible;
     display: block;
+    margin-top: 0;
+    transition: 0.5s;
 } 
 
 .navigation ul li a:hover 
@@ -63,7 +73,9 @@
 {
     .navigation > ul
     {
+        position: relative;
         display: block;
+        z-index: 1;
     }
 
     .navigation > ul > li 
@@ -98,21 +110,37 @@
     }
 }
 
-/* BODY */
+/* Body */
 
 section .inner 
 {
+    position: relative;
     max-width: 70%;
     width: 70%;
     margin: 0 auto;
     padding: 4% 0 4% 0;
 }
+section .inner h1, section.inner p
+{
+    position: relative;
+    z-index: -1;
+}
+
+/* Banner */
 
 #banner 
 {
     background-image: url("../img/banner.jpg");
     background-size: cover;
     height: 700px;
+
+    animation: fadein 1.5s;
+}
+
+@keyframes fadein 
+{
+    from { opacity: .2; }
+    to   { opacity: 1; }
 }
 
 #banner .inner 
@@ -120,17 +148,226 @@ section .inner
     font-size: xx-large;
 }
 
+/* Topics */
+
+.imagefit
+{
+    display: block;
+    width: 100%;
+}
+
+#twosplit 
+{
+    padding: 30px 0 30px 0;
+}
+
+#twosplit .inner 
+{
+    display: flex;
+    
+    animation: slide 2s;
+}
+
+#twosplit .inner article 
+{
+    width: 50%;
+    padding: 0 60px 200px 60px;
+}
+
+@keyframes slide
+{
+    from { margin-top: 3%; }
+    to { margin-top: 0%;}
+}
+
+.card 
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+}
+              
+.card:hover 
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+              
+.container 
+{
+    padding: 2px 16px;   
+}
+
+/* About us */
+
+#threesplit 
+{
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+#threesplit .inner 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#threesplit .inner article 
+{
+    width: 26%;
+}
+
+.link
+{
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Form */
+
+#form
+{
+    padding-bottom: 10%;
+}
+
+input
+{
+    margin: 20px 0;
+}
+
+input[type=text], input[type=password]
+{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+input[type=date]
+{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit]
+{
+    width: 12.5%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:791px)
+{
+    /* Topics media */
+
+    #threesplit .inner 
+    {
+        display: block;
+    }
+
+    #threesplit .inner article 
+    {
+        width: 100%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) 
+{
+    /* About us media */
+
+    #twosplit .inner 
+    {
+        display: block;
+        animation: 0s;
+    }
+
+    #twosplit .inner article 
+    {
+        width: 100%;
+        padding: 0 0 100px 0;
+    }
+
+    /* Banner text media */
+
+    #banner .inner h3
+    {
+        display: none;
+    }
+
+    /* Form media */
+
+    input[type=text], input[type=password]
+    {
+        width: 100%;
+    }
+
+    input[type=date]
+    {
+        width: 100%;
+    }
+
+    input[type=submit]
+    {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) 
+{
+    /* Topics media */
+
+    #twosplit .inner 
+    {
+        display: block;
+    }
+
+    #twosplit .inner article 
+    {
+        width: 100%;
+        padding: 0 0 100px 0;
+    }
+
+    /* Banner media */
+
+    #banner .inner h3
+    {
+        font-size: x-large;
+    }
+
+    /* Form media */
+
+    input[type=text], input[type=password]
+    {
+        width: 75%;
+    }
+
+    input[type=date]
+    {
+        width: 50%;
+    }
+
+    input[type=submit]
+    {
+        width: 25%;
+    }
+}
+
 /* FOOTER */
 
 footer
 {
     padding: 1% 0 1% 0;
-    background-color: black;
+    background-color: rgb(31, 31, 31);
 }
 
 footer a 
 {
-    display: block;
+    display: flex;
     margin: 0 auto;
     width: 70%;
     color: white;
